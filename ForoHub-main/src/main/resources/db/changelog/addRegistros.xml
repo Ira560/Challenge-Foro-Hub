@@ -1,0 +1,49 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="addCursos" author="carsneider">
+        <insert tableName="cursos">
+            <column name="nombre" value="Cálculo diferencial" />
+        </insert>
+        <insert tableName="cursos">
+            <column name="nombre" value="Cálculo Integral" />
+        </insert>
+        <insert tableName="cursos">
+            <column name="nombre" value="Informática I" />
+        </insert>
+        <insert tableName="cursos">
+            <column name="nombre" value="Medios de transmisión" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="addUsuarios" author="carsneider">
+        <insert tableName="usuarios">
+            <column name="nombre" value="Carlos Sneider Soto" />
+            <column name="email" value="cssoto@unicauca.edu.co" />
+            <column name="password" value="$2a$12$hfJH/urzOITHceal3Y.5te.FBsh.eERsxQljEyEZ4TyNiCdtPxxGe" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="addTopicosExamples" author="carsneider">
+        <insert tableName="topicos">
+            <column name="titulo" value="Duda derivada clase 1" />
+            <column name="mensaje" value="En la clase se especifica una regla para realizarlo, pero en el curso el docente lo hace diferente" />
+            <column name="id_autor" value="1" />
+            <column name="id_curso" value="1" />
+        </insert>
+        <insert tableName="topicos">
+            <column name="titulo" value="Duda integral sen^2(x)" />
+            <column name="mensaje" value="Para esta integral no será más fácil aplicar propiedades trigonométricas" />
+            <column name="id_autor" value="1" />
+            <column name="id_curso" value="2" />
+        </insert>
+        <insert tableName="topicos">
+            <column name="titulo" value="Duda concepto de clase y objeto" />
+            <column name="mensaje" value="No entiendo la diferencia entre una clase y un objeto? En qué se diferencian?" />
+            <column name="id_autor" value="1" />
+            <column name="id_curso" value="3" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
